@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <h1 class="navbar-brand"><a class="nav-link" href="{{url_for('index')}}">Algerian Forest Fires Classification</a></h1>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="https://github.com/Abhi-prasad7042/Mushroom-classification-end-to-end"><b>Source Code</b><span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="https://github.com/Abhi-prasad7042"><b>GitHub</b></a>
+        </li>
+      </ul>
+    </div>
+</nav>
+<br>
+<br>
+<main class="container" role="main">
+   
+       <div class="jumbotron">
+         <ul>
+           {% if output==1%}
+            <h1><li class="text-danger">Fire in Forest</li></h1>
+           {% else %}
+            <h1><li class="text-success">There is no fire in forest</li></h1>
+           {% endif %}
+         </ul>
+         <br>
+         <a role ="main" class="btn btn-primary btn-lg" href="{{url_for('index')}}">Home</a>
+       </div>
+       
+      </main>
+
+      <footer class="footer mt-auto py-3">
+        <div class="container">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="{{url_for('index')}}" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="https://github.com/Abhi-prasad7042" class="nav-link px-2 text-muted">GitHub</a></li>
+            <li class="nav-item"><a href="https://www.instagram.com/abhikumar207/" class="nav-link px-2 text-muted">Instagram</a></li>
+            <li class="nav-item"><a href="https://www.linkedin.com/in/abhi-kumar-a06048165/" class="nav-link px-2 text-muted">LinkdIn</a></li>
+            <li class="nav-item"><a href="https://www.facebook.com/profile.php?id=100011591078852" class="nav-link px-2 text-muted">Facebook</a></li>
+          </ul>
+          <p class="text-center text-muted">Abhishek Kumar</p>
+        </div>
+      </footer>
+</body>
+</html>
